@@ -268,11 +268,11 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:v
 
 <script>
 (function(){
-var YMIN=2001,YMAX=2027;
+var YMIN=1999,YMAX=2027;
 var LANES={en:['Sport and learning','Business and marketing','Product and UX'],fr:['Sport et études','Business et marketing','Produit et UX'],de:['Sport und Lernen','Business und Marketing','Produkt und UX']};
 var UI={
-  en:{eyebrow:'Product Design and Experience Lead',h1a:'A route,',h1b:'not a ladder',lede:'Sport, marketing, my own agency, UX and now product. Twenty-five years of changing events and keeping the same pace.',
-    facts:['Mexico, Spain, Germany','English, Spanish, German','B2B SaaS and e-commerce'],artA:'start line, 2001',artB:'next stop',
+  en:{eyebrow:'Product Design and Experience Lead',h1a:'A route,',h1b:'not a ladder',lede:'Sport, marketing, my own agency, UX and now product. Twenty-seven years of changing events and keeping the same pace.',
+    facts:['Mexico, Spain, Germany','English, Spanish, German (familiar with Italian)','B2B SaaS and e-commerce'],artA:'start line, 2001',artB:'next stop',
     ovT:'My route at a glance',ovN:'Each bar is a stage, drawn to scale. Tap one to jump to it.',
     t1:'T1: from business to UX',t2:'T2: from UX craft to product leadership',tm:'Transition zone',
     z1:'Transition zone 1: from business to UX',z2:'Transition zone 2: from UX craft to product leadership',
@@ -281,8 +281,8 @@ var UI={
     skT:'Where each skill was built',skN:'A dot means I used the skill in that stage.',
     nxT:'Next stop',nxN:'Leading product, where craft, business and marketing meet.',
     foot:'Built from my CV, LinkedIn and portfolio. Draft, October 2026.',today:'today'},
-  fr:{eyebrow:'Product Design and Experience Lead',h1a:'Un parcours,',h1b:'pas une échelle',lede:'Sport, marketing, ma propre agence, UX et maintenant produit. Vingt-cinq ans à changer d’épreuve en gardant le même rythme.',
-    facts:['Mexique, Espagne, Allemagne','Anglais, espagnol, allemand','SaaS B2B et e-commerce'],artA:'ligne de départ, 2001',artB:'prochaine étape',
+  fr:{eyebrow:'Product Design and Experience Lead',h1a:'Un parcours,',h1b:'pas une échelle',lede:'Sport, marketing, ma propre agence, UX et maintenant produit. Vingt-sept ans à changer d’épreuve en gardant le même rythme.',
+    facts:['Mexique, Espagne, Allemagne','Anglais, espagnol, allemand (familiarisée avec l’italien)','SaaS B2B et e-commerce'],artA:'ligne de départ, 2001',artB:'prochaine étape',
     ovT:'Mon parcours en un coup d’œil',ovN:'Chaque barre est une étape, dessinée à l’échelle. Touchez-en une pour y accéder.',
     t1:'T1 : du business à l’UX',t2:'T2 : de l’expertise UX au leadership produit',tm:'Zone de transition',
     z1:'Zone de transition 1 : du business à l’UX',z2:'Zone de transition 2 : de l’expertise UX au leadership produit',
@@ -291,8 +291,8 @@ var UI={
     skT:'Où j’ai développé chaque compétence',skN:'Un point indique que j’ai mobilisé la compétence à cette étape.',
     nxT:'Prochaine étape',nxN:'Diriger le produit, là où se rencontrent le savoir-faire, le business et le marketing.',
     foot:'Réalisé à partir de mon CV, de LinkedIn et de mon portfolio. Brouillon, octobre 2026.',today:'aujourd’hui'},
-  de:{eyebrow:'Product Design and Experience Lead',h1a:'Eine Route,',h1b:'keine Karriereleiter',lede:'Sport, Marketing, meine eigene Agentur, UX und jetzt Produkt. Fünfundzwanzig Jahre, in denen ich die Disziplin gewechselt und das Tempo gehalten habe.',
-    facts:['Mexiko, Spanien, Deutschland','Englisch, Spanisch, Deutsch','B2B-SaaS und E-Commerce'],artA:'Startlinie, 2001',artB:'nächster Halt',
+  de:{eyebrow:'Product Design and Experience Lead',h1a:'Eine Route,',h1b:'keine Karriereleiter',lede:'Sport, Marketing, meine eigene Agentur, UX und jetzt Produkt. Siebenundzwanzig Jahre, in denen ich die Disziplin gewechselt und das Tempo gehalten habe.',
+    facts:['Mexiko, Spanien, Deutschland','Englisch, Spanisch, Deutsch (vertraut mit Italienisch)','B2B-SaaS und E-Commerce'],artA:'Startlinie, 2001',artB:'nächster Halt',
     ovT:'Meine Route auf einen Blick',ovN:'Jeder Balken ist eine Etappe, maßstabsgetreu gezeichnet. Tippe auf einen, um dorthin zu springen.',
     t1:'T1: vom Business zu UX',t2:'T2: vom UX-Handwerk zur Produktführung',tm:'Wechselzone',
     z1:'Wechselzone 1: vom Business zu UX',z2:'Wechselzone 2: vom UX-Handwerk zur Produktführung',
@@ -303,6 +303,10 @@ var UI={
     foot:'Erstellt aus meinem Lebenslauf, LinkedIn und Portfolio. Entwurf, Oktober 2026.',today:'heute'}
 };
 var ST=[
+ {id:'italy',sp:{en:'Design',fr:'Design',de:'Design'},side:'r',noswap:1,lane:0,row:1,from:1999.65,to:2000,icon:'i-book',yrs:'Autumn 1999 · Italy',short:'Italy',lbl:'',closed:1,
+  en:{n:'Design and Italian studies',r:'Italy',b:['Studied design and Italian in Italy, autumn 1999']},
+  fr:{n:'Études de design et d’italien',r:'Italie',b:['J’ai étudié le design et l’italien en Italie, automne 1999']},yesFR:'Automne 1999 · Italie',
+  de:{n:'Studium in Design und Italienisch',r:'Italien',b:['Design und Italienisch in Italien studiert, Herbst 1999']},yesDE:'Herbst 1999 · Italien'},
  {id:'studies',sp:{en:'Marketing',fr:'Marketing',de:'Marketing'},side:'',lane:0,from:2001,to:2005,icon:'i-book',yrs:'2001 to 2005 · Mexico City',short:'Studies',closed:1,
   en:{n:'Universidad Anáhuac',r:'Bachelor\'s in Marketing Management',b:['Marketing degree, 2001 to 2005','Exchange in international and intercultural communication, Furtwangen, Germany (2004)']},
 fr:{n:'Universidad Anáhuac',r:'Licence en Marketing Management',b:['Licence en marketing, 2001 à 2005','Échange en communication internationale et interculturelle, Furtwangen, Allemagne (2004)']},yesFR:'2001 à 2005 · Mexico',de:{n:'Universidad Anáhuac',r:'Bachelor in Marketing Management',b:['Marketing-Abschluss, 2001 bis 2005','Auslandssemester in internationaler und interkultureller Kommunikation, Furtwangen, Deutschland (2004)']},yesDE:'2001 bis 2005 · Mexiko-Stadt'},
@@ -387,7 +391,7 @@ function renderText(){
 }
 function renderRuler(){
   var rows=[2,2,1],h='';
-  var ticks=[2001,2005,2010,2015,2020,2026],ax='';
+  var ticks=[2000,2005,2010,2015,2020,2026],ax='';
   for(var t=0;t<ticks.length;t++)ax+='<span style="left:'+pct(ticks[t])+'">'+ticks[t]+'</span>';
   var grid='';for(var g=0;g<ticks.length;g++)grid+='<i class="gl" style="left:'+pct(ticks[g])+'"></i>';
   var lanes='';
