@@ -71,6 +71,10 @@ h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:-.06em;heigh
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px;font-weight:500}
 .chip i{width:9px;height:9px;border-radius:50%;background:var(--ink)}
+.facts.links{margin-top:10px}
+a.chip{color:inherit;text-decoration:none}
+a.chip:hover{border-color:var(--ink-2)}
+a.chip:hover i{background:var(--c1)}
 .hero svg.art{width:100%;height:auto;max-width:520px;justify-self:center}
 .hand{font-family:var(--hand);font-weight:600}
 
@@ -220,6 +224,7 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:v
     <div>
       <p class="eyebrow" role="heading" aria-level="1" data-i="eyebrow"></p>
       <div class="facts" id="facts"></div>
+      <div class="facts links"><a class="chip" href="https://www.linkedin.com/in/andmaillard" target="_blank" rel="noopener"><i></i>LinkedIn</a><a class="chip" href="https://medium.com/@andrea.maillardtouche" target="_blank" rel="noopener"><i></i>Medium</a></div>
     </div>
   </div>
 
