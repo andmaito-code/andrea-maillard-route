@@ -71,10 +71,11 @@ h1 em::after{content:"";position:absolute;left:-2%;right:-2%;bottom:-.06em;heigh
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
 .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:14px;font-weight:500}
 .chip i{width:9px;height:9px;border-radius:50%;background:var(--ink)}
-.facts.links{margin-top:10px}
-a.chip{color:inherit;text-decoration:none}
-a.chip:hover{border-color:var(--ink-2)}
-a.chip:hover i{background:var(--c1)}
+.hlinks{display:flex;gap:6px}
+.hl{font-weight:600;font-size:13px;line-height:1;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.hl:hover{color:var(--ink);border-color:var(--ink-2)}
+.hl .s{display:none}
+@media (max-width:520px){.hl{padding:8px 10px}.hl .l{display:none}.hl .s{display:inline}}
 .hero svg.art{width:100%;height:auto;max-width:520px;justify-self:center}
 .hand{font-family:var(--hand);font-weight:600}
 
@@ -214,6 +215,7 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:v
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Andrea Maillard"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#avatar"/></svg><span>Andrea Maillard</span></a>
     <div class="sp"></div>
+    <nav class="hlinks" aria-label="Links"><a class="hl" href="https://www.linkedin.com/in/andmaillard" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="l">LinkedIn</span><span class="s">in</span></a><a class="hl" href="https://medium.com/@andrea.maillardtouche" target="_blank" rel="noopener" aria-label="Medium"><span class="l">Medium</span><span class="s">M</span></a></nav>
     <div class="seg" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="es" aria-pressed="false">ES</button><button type="button" data-lang="de" aria-pressed="false">DE</button></div>
     <button class="ibtn" id="theme" type="button" aria-label="Theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" stroke="none"/></svg></button>
   </div>
@@ -224,7 +226,6 @@ footer{margin-top:48px;padding-top:20px;border-top:1px solid var(--line);color:v
     <div>
       <p class="eyebrow" role="heading" aria-level="1" data-i="eyebrow"></p>
       <div class="facts" id="facts"></div>
-      <div class="facts links"><a class="chip" href="https://www.linkedin.com/in/andmaillard" target="_blank" rel="noopener"><i></i>LinkedIn</a><a class="chip" href="https://medium.com/@andrea.maillardtouche" target="_blank" rel="noopener"><i></i>Medium</a></div>
     </div>
   </div>
 
