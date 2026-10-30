@@ -369,7 +369,7 @@ var ROWS=[
  {en:'AI and prototyping',es:'IA y prototipos',de:'KI und Prototyping',on:['aicert','positive']}
 ];
 var lang='en',themeMode='auto';
-try{var sv=localStorage.getItem('route-lang');if(sv==='en'||sv==='es'||sv==='de')lang=sv;var tm=localStorage.getItem('route-theme');if(tm==='light'||tm==='dark'||tm==='auto')themeMode=tm;}catch(e){}
+try{var tm=localStorage.getItem('route-theme');if(tm==='light'||tm==='dark'||tm==='auto')themeMode=tm;}catch(e){}
 function $(s,r){return (r||document).querySelector(s)}
 function pct(y){return ((y-YMIN)/(YMAX-YMIN)*100).toFixed(2)+'%'}
 function laneName(i){return LANES[lang][i]}
@@ -493,7 +493,7 @@ function renderAll(){renderText();renderRuler();renderStages();renderImpact();re
 document.addEventListener('click',function(e){
   var tg=e.target.closest('.tog');if(tg){var cd=tg.closest('.card');var cl=cd.classList.toggle('closed');tg.setAttribute('aria-expanded',cl?'false':'true');requestAnimationFrame(layoutRoute);return}
   var t=e.target.closest('[data-go]');if(t){goTo(t.getAttribute('data-go'));return}
-  var lb=e.target.closest('[data-lang]');if(lb){lang=lb.getAttribute('data-lang');try{localStorage.setItem('route-lang',lang)}catch(x){}renderAll();return}
+  var lb=e.target.closest('[data-lang]');if(lb){lang=lb.getAttribute('data-lang');renderAll();return}
   if(e.target.closest('#theme')){themeMode=themeMode==='auto'?'dark':themeMode==='dark'?'light':'auto';try{localStorage.setItem('route-theme',themeMode)}catch(x){}applyTheme();}
 });
 window.addEventListener('scroll',onScroll,{passive:true});
