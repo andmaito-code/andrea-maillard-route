@@ -327,10 +327,10 @@ fr:{n:'Mintly Media, agence de marketing digital',r:'Fondatrice',b:['J’ai diri
  {id:'hotel',sp:{en:'Hotel',fr:'Hôtel',de:'Hotel'},side:'',lane:1,row:1,from:2016,to:2018.5,icon:'i-key',yrs:'2016 to 2018 · Mexico City',short:'Hospitality',lbl:'Hotel',
   en:{n:'Boutique hospitality business',r:'Manager and facility manager',b:['Occupancy above 80% and Airbnb Superhost status','Ran operations and staff as facility manager','Strategy, roadmap and investor relations']},
 fr:{n:'Hôtel boutique',r:'Directrice et facility manager',b:['Taux d’occupation supérieur à 80 % et statut Superhost Airbnb','J’ai dirigé l’exploitation et le personnel en tant que facility manager','J’ai défini la stratégie et la feuille de route, et géré les relations avec les investisseurs']},yesFR:'2016 à 2018 · Mexico',de:{n:'Boutique-Hospitality-Betrieb',r:'Managerin und Facility Managerin',b:['Auslastung über 80 % und Airbnb-Superhost-Status','Betrieb und Personal als Facility Managerin geführt','Strategie, Roadmap und Investor Relations']},yesDE:'2016 bis 2018 · Mexiko-Stadt'},
- {id:'bloopark',sp:{en:'UX',fr:'UX',de:'UX'},side:'l',lane:2,from:2018.7,to:2019.55,icon:'i-wire',yrs:'2018 to 2019 · Germany',short:'bloopark',lbl:'',zone:1,
+ {id:'bloopark',noBar:1,sp:{en:'UX',fr:'UX',de:'UX'},side:'l',lane:2,from:2018.7,to:2019.55,icon:'i-wire',yrs:'2018 to 2019 · Germany',short:'bloopark',lbl:'',zone:1,
   en:{n:'Bloopark Systems IT agency',r:'Senior UX designer',b:['Raised client satisfaction with a management platform that balanced usability and compliance','Designed and shipped software for an enterprise client\'s internal system, following Agile']},
 fr:{n:'Bloopark Systems, agence informatique',r:'Senior UX designer',b:['J’ai amélioré la satisfaction client avec une plateforme de gestion qui conciliait ergonomie et conformité','J’ai conçu et livré un logiciel pour le système interne d’un grand compte, en méthode agile']},yesFR:'2018 à 2019 · Allemagne',de:{n:'Bloopark Systems, IT-Agentur',r:'Senior UX Designerin',b:['Kundenzufriedenheit mit einer Management-Plattform gesteigert, die Usability und Compliance ausbalancierte','Software für das interne System eines Enterprise-Kunden entworfen und ausgeliefert, nach Agile']},yesDE:'2018 bis 2019 · Deutschland'},
- {id:'rapidmail',sp:{en:'UX design',fr:'Design UX',de:'UX-Design'},side:'',lane:2,from:2019.6,to:2022.55,icon:'i-mail',yrs:'2019 to 2022 · Germany',short:'rapidmail',
+ {id:'rapidmail',rFrom:2018.7,tip:{en:'Product UI/UX at bloopark and rapidmail',fr:'Product UI/UX chez bloopark et rapidmail',de:'Product UI/UX bei bloopark und rapidmail'},tipY:{en:'2018 to 2022',fr:'2018 à 2022',de:'2018 bis 2022'},sp:{en:'Product UI/UX',fr:'Product UI/UX',de:'Product UI/UX'},side:'',lane:2,from:2019.6,to:2022.55,icon:'i-mail',yrs:'2019 to 2022 · Germany',short:'rapidmail',
   en:{n:'rapidmail',r:'Senior UX designer',b:['Co-created branding and UX baselines','Built the current Form builder, Integrations and Automations features from the ground up','Co-created a prioritization system (2020)','Hired and mentored a designer']},
 fr:{n:'rapidmail',r:'Senior UX designer',b:['J’ai cocréé les fondations de l’identité de marque et de l’UX','J’ai conçu de A à Z les fonctionnalités actuelles du Form builder, des Intégrations et des Automatisations','J’ai cocréé un système de priorisation (2020)','J’ai recruté et accompagné une designer']},yesFR:'2019 à 2022 · Allemagne',de:{n:'rapidmail',r:'Senior UX Designerin',b:['Branding- und UX-Grundlagen mitentwickelt','Die heutigen Funktionen Formularbuilder, Integrationen und Automatisierungen von Grund auf gebaut','Ein Priorisierungssystem mitentwickelt (2020)','Eine Designerin eingestellt und begleitet']},yesDE:'2019 bis 2022 · Deutschland'},
  {id:'instamotion',sp:{en:'Ecommerce',fr:'E-commerce',de:'E-Commerce'},side:'',lane:2,from:2022.55,to:2024.7,icon:'i-cart',yrs:'2022 to 2024 · Germany',short:'InstaMotion',lbl:'Insta',
@@ -396,7 +396,7 @@ function renderRuler(){
     for(var s=0;s<ST.length;s++){var S=ST[s];if(S.lane!==l||S.next||S.noBar)continue;
       var top=(S.row||0)*32;var tip=S.tip?S.tip[lang]:S.tipR?S[lang].r:S[lang].n+', '+S.yrs;
       var sl=S.sp?S.sp[lang]:(S.lbl!==undefined?S.lbl:S.short),sd=S.side||'';
-      inner+='<button type="button" class="bar" data-lane="'+l+'" data-go="'+S.id+'" style="left:'+pct(S.from)+';width:calc('+pct(S.to)+' - '+pct(S.from)+');top:'+top+'px" aria-label="'+tip+'">'+(sd?'':sl)+'</button>'+(sd==='r'?'<span class="blabel" style="left:calc('+pct(S.to)+' + 8px);top:'+top+'px">'+sl+'</span>':'')+(sd==='l'?'<span class="blabel" style="right:calc(100% - '+pct(S.from)+' + 8px);top:'+top+'px">'+sl+'</span>':'');}
+      inner+='<button type="button" class="bar" data-lane="'+l+'" data-go="'+S.id+'" style="left:'+pct(S.rFrom||S.from)+';width:calc('+pct(S.to)+' - '+pct(S.rFrom||S.from)+');top:'+top+'px" aria-label="'+tip+'">'+(sd?'':sl)+'</button>'+(sd==='r'?'<span class="blabel" style="left:calc('+pct(S.to)+' + 8px);top:'+top+'px">'+sl+'</span>':'')+(sd==='l'?'<span class="blabel" style="right:calc(100% - '+pct(S.rFrom||S.from)+' + 8px);top:'+top+'px">'+sl+'</span>':'');}
     if(l===0){for(var d=0;d<DIA.length;d++)inner+='<button type="button" class="dia"'+(DIA[d].go?' data-go="'+DIA[d].go+'"':'')+' style="left:'+pct(DIA[d].y)+';top:38px" aria-label="'+DIA[d][lang]+'"></button>'+(DIA[d].tag?'<span class="blabel" style="left:calc('+pct(DIA[d].y)+' + 16px);top:31px">'+DIA[d].tag+'</span>':'');}
     lanes+='<div class="lane" style="height:'+(rows[l]*32-6)+'px">'+inner+'</div>';
   }
@@ -469,6 +469,7 @@ function showTip(el){
     var T=S[lang],ttl=S.tip?S.tip[lang]:(S.tipR||!S.noswap?T.r:T.n),sub=S.noswap?T.r:T.n;
     var yrs=lang==='fr'?S.yesFR:lang==='de'?S.yesDE:S.yrs;
     if(S.tip||S.tipR)yrs=yrs.split(' \u00b7 ')[0];
+    if(S.tipY)yrs=S.tipY[lang];
     h='<b>'+ttl+'</b>';
     if(!S.tip&&!S.tipR&&sub)h+='<span class="tr">'+sub+'</span>';
     h+='<div class="ty">'+yrs+'</div>';
